@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.psp_a2.HelloController">
+   <children>
+      <Button fx:id="btnPing" layoutX="112.0" layoutY="175.0" mnemonicParsing="false" onAction="#onPingClick" text="ping" />
+      <Button fx:id="btnDir" layoutX="274.0" layoutY="175.0" mnemonicParsing="false" onAction="#onDirClick" text="dir" />
+      <Button fx:id="btnHelp" layoutX="429.0" layoutY="175.0" mnemonicParsing="false" onAction="#onHelpClick" text="help" />
+      <Button fx:id="btnCalculator" layoutX="270.0" layoutY="284.0" mnemonicParsing="false" onAction="#onCalcClick" text="Calc" />
+   </children>
+</AnchorPane>

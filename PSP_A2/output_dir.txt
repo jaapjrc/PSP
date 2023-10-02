@@ -1,0 +1,19 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: 3412-C68B
+
+ Directorio de C:\WorkspaceDAM\PSP\PSP_A2
+
+02/10/2023  10:53    <DIR>          .
+02/10/2023  10:53    <DIR>          ..
+02/10/2023  08:47               490 .gitignore
+02/10/2023  10:05    <DIR>          .idea
+02/10/2023  08:47    <DIR>          .mvn
+02/10/2023  08:47            10.284 mvnw
+02/10/2023  08:47             6.734 mvnw.cmd
+02/10/2023  10:53                 0 output_dir.txt
+02/10/2023  10:53               486 output_ping.txt
+02/10/2023  08:47             2.411 pom.xml
+02/10/2023  08:47    <DIR>          src
+02/10/2023  08:50    <DIR>          target
+               6 archivos         20.405 bytes
+               6 dirs  231.557.853.184 bytes libres
