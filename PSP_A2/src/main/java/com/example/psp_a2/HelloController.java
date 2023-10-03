@@ -20,9 +20,7 @@ public class HelloController {
 
 
     @FXML
-    protected void onPingClick() {
-        HelloApplication.ping();
-    }
+    protected void onPingClick() { HelloApplication.ping(); }
 
     @FXML
     protected void onDirClick() {

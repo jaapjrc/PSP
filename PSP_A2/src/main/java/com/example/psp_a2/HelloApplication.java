@@ -3,6 +3,7 @@ package com.example.psp_a2;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,6 +18,15 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    public static void setAlert() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Aviso");
+        alert.setContentText("Proceso completado correctamente");
+        alert.showAndWait();
+    }
+
+
     public static void ping(){
         ProcessBuilder processBuilder = new ProcessBuilder();
 
@@ -24,6 +34,7 @@ public class HelloApplication extends Application {
 
         try {
             Process process = processBuilder.start();
+            setAlert();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -36,6 +47,7 @@ public class HelloApplication extends Application {
 
         try {
             Process process = processBuilder.start();
+            setAlert();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -48,6 +60,7 @@ public class HelloApplication extends Application {
 
         try {
             Process process = processBuilder.start();
+            setAlert();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
