@@ -36,7 +36,7 @@ public class HelloController {
 
     @FXML
     protected void onCalcClick() {
-        HelloApplication.help();
+        HelloApplication.calculator();
     }
 
 }

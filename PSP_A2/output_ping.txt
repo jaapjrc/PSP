@@ -1,11 +1,11 @@
 
-Haciendo ping a google.com [142.250.201.78] con 32 bytes de datos:
-Respuesta desde 142.250.201.78: bytes=32 tiempo=67ms TTL=118
-Respuesta desde 142.250.201.78: bytes=32 tiempo=96ms TTL=118
-Respuesta desde 142.250.201.78: bytes=32 tiempo=74ms TTL=118
+Haciendo ping a google.com [216.58.215.174] con 32 bytes de datos:
+Respuesta desde 216.58.215.174: bytes=32 tiempo=20ms TTL=108
+Respuesta desde 216.58.215.174: bytes=32 tiempo=19ms TTL=108
+Respuesta desde 216.58.215.174: bytes=32 tiempo=24ms TTL=108
 
-Estad¡sticas de ping para 142.250.201.78:
+Estad¡sticas de ping para 216.58.215.174:
     Paquetes: enviados = 3, recibidos = 3, perdidos = 0
     (0% perdidos),
 Tiempos aproximados de ida y vuelta en milisegundos:
-    M¡nimo = 67ms, M ximo = 96ms, Media = 79ms
+    M¡nimo = 19ms, M ximo = 24ms, Media = 21ms
