@@ -1,0 +1,19 @@
+ El volumen de la unidad F no tiene etiqueta.
+ El n£mero de serie del volumen es: 80C7-C5EF
+
+ Directorio de F:\WorkspaceDAM\PSP\PSP_A2
+
+03/10/2023  19:45    <DIR>          .
+03/10/2023  19:45    <DIR>          ..
+02/10/2023  16:58               527 .gitignore
+03/10/2023  19:45    <DIR>          .idea
+02/10/2023  16:58    <DIR>          .mvn
+02/10/2023  16:58            10.600 mvnw
+02/10/2023  16:58             6.922 mvnw.cmd
+03/10/2023  19:45                 0 output_dir.txt
+03/10/2023  19:45                 0 output_ping.txt
+03/10/2023  19:41             2.484 pom.xml
+02/10/2023  16:58    <DIR>          src
+03/10/2023  17:04    <DIR>          target
+               6 archivos         20.533 bytes
+               6 dirs  213.581.705.216 bytes libres
