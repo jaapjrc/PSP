@@ -1,41 +1,10 @@
 import java.util.Random;
 
-public class Ejercicio1 extends Thread {
-    private int[] array;
-    private int inicio;
-    private int fin;
-    private int mayor;
-    private String nombre;
-
-    public Ejercicio1(int[] array, int inicio, int fin, String nombre) {
-        super();
-        this.array = array;
-        this.inicio = inicio;
-        this.fin = fin;
-        this.nombre = nombre;
-    }
-
-    @Override
-    public void run() {
-        mayor = array[inicio];
-
-        for (int i = inicio + 1; i < fin; i++) {
-            if (array[i] > mayor) {
-                mayor = array[i];
-            }
-        }
-
-        System.out.println(nombre + ": " + mayor);
-    }
-
-    public int getMayor() {
-        return mayor;
-    }
-
+public class Main {
     public static void main(String[] args) {
         Random r = new Random();
         int[] arrayNumeros = new int[1000];
-        Ejercicio1[] hilos = new Ejercicio1[5];
+        Hilo[] hilos = new Hilo[5];
         int suma = 0;
         int subconjunto = arrayNumeros.length / hilos.length;
 
@@ -45,19 +14,19 @@ public class Ejercicio1 extends Thread {
 
         for (int i = 0; i < hilos.length; i++) {
             int inicio = i * subconjunto;
-            int fin = 0;
+            int fin;
             if (i == hilos.length - 1) {
                 fin = arrayNumeros.length;
             } else {
                 fin = (i + 1) * subconjunto;
             }
-            String nombre = "Hilo " + String.valueOf(i + 1);
-            hilos[i] = new Ejercicio1(arrayNumeros, inicio, fin, nombre);
+            String nombre = "Hilo " + (i + 1);
+            hilos[i] = new Hilo(arrayNumeros, inicio, fin, nombre);
             hilos[i].start();
         }
 
         try {
-            for (Ejercicio1 hilo : hilos) {
+            for (Hilo hilo : hilos) {
                 hilo.join();
             }
         } catch (Exception e) {
