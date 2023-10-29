@@ -6,7 +6,7 @@ public class Vasija {
     }
 
     public synchronized void generarPocima() {
-        if (litros < 5) {
+        if (litros < 4.5) {
             litros++;
             System.out.println("Se ha generado 1 litro de pócima. Cantidad actual: " + litros + " litros.");
         }

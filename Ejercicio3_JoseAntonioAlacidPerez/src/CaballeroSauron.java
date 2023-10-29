@@ -7,14 +7,16 @@ public class CaballeroSauron implements Runnable {
     private Semaphore dagas;
     private int energia;
     private Vasija vasija;
+    private ElSagas elSagas;
 
-    public CaballeroSauron(String nombre, Semaphore escudos, Semaphore espadas, Semaphore dagas, int energia, Vasija vasija) {
+    public CaballeroSauron(String nombre, Semaphore escudos, Semaphore espadas, Semaphore dagas, int energia, Vasija vasija, ElSagas elSagas) {
         this.nombre = nombre;
         this.escudos = escudos;
         this.espadas = espadas;
         this.dagas = dagas;
         this.energia = energia;
         this.vasija = vasija;
+        this.elSagas = elSagas;
     }
 
     @Override
@@ -38,7 +40,8 @@ public class CaballeroSauron implements Runnable {
 
                 while (this.energia > 0) {
                     energia--;
-                    Thread.sleep(1000);
+                    System.out.println("Caballero Sauron " + this.nombre + " pierde energía");
+                    Thread.sleep(200);
                 }
 
                 escudos.release();
@@ -54,9 +57,15 @@ public class CaballeroSauron implements Runnable {
                         + escudos.availablePermits() + " Espadas disponibles: " + espadas.availablePermits() + " Dagas disponibles: " + dagas.availablePermits());
                 Thread.sleep(200);
 
+                this.elSagas.aumentarIluvatar();
+                Thread.sleep(2000);
+                System.out.println("El Sagas dice: Sauron: " + this.elSagas.getMarcadorSauron() + " Iluvatar: " + this.elSagas.getMarcadorIluatar());
+
+
                 while (energia != 30) {
                     Thread.sleep(2000);
                     this.energia += this.vasija.tomarPocima();
+                    System.out.println("Caballero Sauron " + this.nombre + " recupera energía");
                 }
             }
         } catch (InterruptedException e) {

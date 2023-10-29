@@ -7,14 +7,16 @@ public class CaballeroIluvatar implements Runnable {
     private Semaphore dagas;
     private int energia;
     private LibroConjuros libroConjuros;
+    private ElSagas elSagas;
 
-    public CaballeroIluvatar(String nombre, Semaphore escudos, Semaphore espadas, Semaphore dagas, int energia, LibroConjuros libroConjuros) {
+    public CaballeroIluvatar(String nombre, Semaphore escudos, Semaphore espadas, Semaphore dagas, int energia, LibroConjuros libroConjuros, ElSagas elSagas) {
         this.nombre = nombre;
         this.escudos = escudos;
         this.espadas = espadas;
         this.dagas = dagas;
         this.energia = energia;
         this.libroConjuros = libroConjuros;
+        this.elSagas = elSagas;
     }
 
     @Override
@@ -38,7 +40,8 @@ public class CaballeroIluvatar implements Runnable {
 
                 while (this.energia > 0) {
                     energia--;
-                    Thread.sleep(1000);
+                    System.out.println("Caballero Ilúvatar " + this.nombre + " pierde energía");
+                    Thread.sleep(200);
                 }
 
                 escudos.release();
@@ -54,10 +57,16 @@ public class CaballeroIluvatar implements Runnable {
                         + escudos.availablePermits() + " Espadas disponibles: " + espadas.availablePermits() + " Dagas disponibles: " + dagas.availablePermits());
                 Thread.sleep(200);
 
+                this.elSagas.aumentarSauron();
+                Thread.sleep(2000);
+                System.out.println("El Sagas dice: Sauron: " + this.elSagas.getMarcadorSauron() + " Iluvatar: " + this.elSagas.getMarcadorIluatar());
+
+
                 while (energia != 30) {
                     this.energia += this.libroConjuros.leerConjuro();
                     Thread.sleep(5000);
                     this.libroConjuros.terminarLeer();
+                    System.out.println("Caballero Ilúvatar " + this.nombre + " recupera energía");
                 }
             }
         } catch (InterruptedException e) {
