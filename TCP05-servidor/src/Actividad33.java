@@ -19,7 +19,7 @@ public class Actividad33 {
         try {
             salida = c1.getOutputStream();
             flujoSalida = new DataOutputStream(salida);
-            flujoSalida.writeUTF("HOLA CHAVAL");
+            flujoSalida.writeUTF("Hola");
 
         } catch (IOException io) {
             io.printStackTrace();
