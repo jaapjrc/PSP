@@ -1,0 +1,15 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: 3412-C68B
+
+ Directorio de C:\WorkspaceDAM\PSP\PSP\examenProcesos
+
+14/12/2023  12:14    <DIR>          .
+14/12/2023  12:14    <DIR>          ..
+14/12/2023  12:02               344 .gitignore
+14/12/2023  12:14    <DIR>          .idea
+14/12/2023  12:05               433 examenProcesos.iml
+14/12/2023  12:14                 0 muestra.txt
+14/12/2023  12:05    <DIR>          out
+14/12/2023  12:14    <DIR>          src
+               3 archivos            777 bytes
+               5 dirs  231.800.209.408 bytes libres

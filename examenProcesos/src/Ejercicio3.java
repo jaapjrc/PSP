@@ -1,23 +1,23 @@
-/*Crea un programa que ejecute el comando DIR con el parámetro /D y que
-        muestre su resultado en la pantalla*/
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Ejercicio2 {
+public class Ejercicio3 {
     public static void main(String[] args) {
-        ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", "dir /D");
+        ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", "dir");
+        pb.redirectErrorStream(true);
+        ProcessBuilder pb1 = new ProcessBuilder("cmd.exe", "/c", "dir > muestra.txt");
         pb.redirectErrorStream(true);
         Process p;
         try {
             p = pb.start();
+            pb1.start();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String linea;
-        do {
+         do {
             try {
                 linea = r.readLine();
             } catch (IOException e) {
